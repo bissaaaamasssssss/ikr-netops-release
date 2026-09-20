@@ -701,7 +701,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
         title = {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Image(painter = painterResource(id = R.drawable.ic_info), contentDescription = null,
-                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(iconColor))
+                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(NeonCyan))
                 Spacer(modifier = Modifier.width(10.dp))
                 Text("Tentang Aplikasi", fontWeight = FontWeight.Bold)
             }
@@ -755,7 +755,7 @@ fun DeveloperDialog(onDismiss: () -> Unit) {
         title = {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Image(painter = painterResource(id = R.drawable.ic_developer), contentDescription = null,
-                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(iconColor))
+                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(NeonCyan))
                 Spacer(modifier = Modifier.width(10.dp))
                 Text("Pengembang", fontWeight = FontWeight.Bold)
             }
