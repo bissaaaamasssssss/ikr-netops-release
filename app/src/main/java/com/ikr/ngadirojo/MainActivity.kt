@@ -633,7 +633,7 @@ fun SettingsScreen(
             onClick = { showIkrMenu = !showIkrMenu }
         )
         if (showIkrMenu) {
-            SettingsCard(R.drawable.ic_report, "Laporan Teknisi", iconColor = Color(0xFF4CAF50), "Buat dan kirim laporan ke CS", onReportClick)
+            SettingsCard(R.drawable.ic_report, "Laporan Teknisi", "Buat dan kirim laporan ke CS", onReportClick, iconColor = Color(0xFF4CAF50))
             SettingsCard(R.drawable.ic_satria, "SATRIA", "Buka portal SATRIA 2000", onSatriaClick)
         }
         Spacer(modifier = Modifier.height(8.dp))
