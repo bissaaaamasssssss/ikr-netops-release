@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- WiFi signal arcs di atas -->
+    <path android:fillColor="#FFFFFF" android:pathData="M12,1C9.5,1 7.2,2 5.5,3.6l1.3,1.3C8.2,3.7 10,3 12,3s3.8,0.7 5.2,1.9l1.3,-1.3C16.8,2 14.5,1 12,1z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M12,4c-1.7,0 -3.2,0.7 -4.3,1.7l1.3,1.3C9.7,6.4 10.8,6 12,6s2.3,0.4 3,1l1.3,-1.3C15.2,4.7 13.7,4 12,4z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M12,7c-0.9,0 -1.7,0.4 -2.3,0.9l1.3,1.3c0.3,-0.1 0.6,-0.2 1,-0.2s0.7,0.1 1,0.2l1.3,-1.3C13.7,7.4 12.9,7 12,7z"/>
+    <!-- Badan router -->
+    <path android:fillColor="#FFFFFF" android:pathData="M3,13h18v3c0,0.55 -0.45,1 -1,1H4c-0.55,0 -1,-0.45 -1,-1V13z"/>
+    <!-- LED dots (warna background) -->
+    <path android:fillColor="#0A0F1E" android:pathData="M6,15.5m-0.6,0a0.6,0.6 0,1 1,1.2 0a0.6,0.6 0,1 1,-1.2 0"/>
+    <path android:fillColor="#0A0F1E" android:pathData="M8.5,15.5m-0.6,0a0.6,0.6 0,1 1,1.2 0a0.6,0.6 0,1 1,-1.2 0"/>
+    <path android:fillColor="#0A0F1E" android:pathData="M11,15.5m-0.6,0a0.6,0.6 0,1 1,1.2 0a0.6,0.6 0,1 1,-1.2 0"/>
+    <path android:fillColor="#0A0F1E" android:pathData="M13.5,15.5m-0.6,0a0.6,0.6 0,1 1,1.2 0a0.6,0.6 0,1 1,-1.2 0"/>
+    <path android:fillColor="#0A0F1E" android:pathData="M16,15.5m-0.6,0a0.6,0.6 0,1 1,1.2 0a0.6,0.6 0,1 1,-1.2 0"/>
+    <path android:fillColor="#0A0F1E" android:pathData="M18.5,15.5m-0.6,0a0.6,0.6 0,1 1,1.2 0a0.6,0.6 0,1 1,-1.2 0"/>
+    <!-- Antena kiri -->
+    <path android:fillColor="#FFFFFF" android:pathData="M5.5,7l0.8,-0.1l1,6.1l-0.8,0.1z"/>
+    <!-- Antena kanan -->
+    <path android:fillColor="#FFFFFF" android:pathData="M18.5,7l-0.8,-0.1l-1,6.1l0.8,0.1z"/>
+    <!-- Kaki bawah router -->
+    <path android:fillColor="#FFFFFF" android:pathData="M5,18h2v2H5z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M17,18h2v2h-2z"/>
+</vector>

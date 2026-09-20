@@ -1,0 +1,28 @@
+# Build outputs
+build/
+app/build/
+*/build/
+
+# Gradle
+.gradle/
+gradle/wrapper/gradle-wrapper.jar.lck
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Keystore (JANGAN di-push!)
+*.keystore
+*.jks
+
+# Local config
+local.properties
+
+# Others
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
