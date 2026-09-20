@@ -637,7 +637,7 @@ fun SettingsScreen(
             SettingsCard(R.drawable.ic_satria, "SATRIA", "Buka portal SATRIA 2000", onSatriaClick)
         }
         Spacer(modifier = Modifier.height(8.dp))
-        SettingsCard(R.drawable.ic_info, "Tentang Aplikasi", iconColor = Color(0xFF2196F3), "IKR NETOPS v8.1", onAboutClick)
+        SettingsCard(R.drawable.ic_info, "Tentang Aplikasi", "IKR NETOPS v8.1", onAboutClick, iconColor = Color(0xFF2196F3))
         SettingsCard(R.drawable.ic_developer, "Pengembang", "Themin Vigi Dwi Safik Reno", onDeveloperClick, iconColor = Color(0xFF9C27B0))
         SettingsCard(R.drawable.ic_router, "Server Speed Test", "Cloudflare · Tele2 · OVH", {}, iconColor = Color(0xFFFF9800))
         SettingsCard(R.drawable.ic_settings, "Mode Login", "Auto-Login · Manual Fallback", {}, iconColor = Color(0xFFE91E63))
