@@ -4,11 +4,11 @@ plugins {
 }
 android {
     namespace 'com.ikr.ngadirojo'
-    compileSdk 35
+    compileSdk 34
     defaultConfig {
         applicationId "com.ikr.ngadirojo"
         minSdk 24
-        targetSdk 35
+        targetSdk 34
         versionCode 3
         versionName "8.2"
     }
@@ -32,7 +32,6 @@ android {
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
     compileOptions {
