@@ -626,7 +626,6 @@ fun SettingsScreen(
         Text("Kelola preferensi aplikasi", color = TextSub, fontSize = 11.sp, modifier = Modifier.padding(top = 4.dp))
         Spacer(modifier = Modifier.height(28.dp))
         // ===== KHUSUS IKR (expandable) =====
-        SettingsCard(
         SettingsCard(R.drawable.ic_developer, "Pengembang", "Themin Vigi Dwi Safik Reno", onDeveloperClick, iconColor = Color(0xFF9C27B0))
             SettingsCard(R.drawable.ic_team, "KHUSUS IKR", if (showIkrMenu) "Tap untuk tutup" else "Laporan Teknisi - SATRIA", { showIkrMenu = !showIkrMenu }, iconColor = Color(0xFF4CAF50))
         SettingsCard(R.drawable.ic_settings, "Mode Tampilan", 
