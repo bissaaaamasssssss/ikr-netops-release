@@ -630,8 +630,6 @@ fun SettingsScreen(
             R.drawable.ic_team,
             color = Color(0xFF4CAF50), "KHUSUS IKR",
             if (showIkrMenu) "Tap untuk tutup" else "Laporan Teknisi - SATRIA",
-            onClick = { showIkrMenu = !showIkrMenu }
-        )
         if (showIkrMenu) {
             SettingsCard(R.drawable.ic_report, "Laporan Teknisi", "Buat dan kirim laporan ke CS", onReportClick, iconColor = Color(0xFF4CAF50))
             SettingsCard(R.drawable.ic_satria, "SATRIA", "Buka portal SATRIA 2000", onSatriaClick)
