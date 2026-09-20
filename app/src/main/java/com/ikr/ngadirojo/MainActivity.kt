@@ -627,10 +627,7 @@ fun SettingsScreen(
         Spacer(modifier = Modifier.height(28.dp))
         // ===== KHUSUS IKR (expandable) =====
         SettingsCard(
-        SettingsCard(R.drawable.ic_info, "Tentang Aplikasi", "IKR NETOPS v8.1", onAboutClick, iconColor = Color(0xFF2196F3))
         SettingsCard(R.drawable.ic_developer, "Pengembang", "Themin Vigi Dwi Safik Reno", onDeveloperClick, iconColor = Color(0xFF9C27B0))
-        SettingsCard(R.drawable.ic_router, "Server Speed Test", "Cloudflare · Tele2 · OVH", {}, iconColor = Color(0xFFFF9800))
-        SettingsCard(R.drawable.ic_settings, "Mode Login", "Auto-Login · Manual Fallback", {}, iconColor = Color(0xFFE91E63))
             SettingsCard(R.drawable.ic_team, "KHUSUS IKR", if (showIkrMenu) "Tap untuk tutup" else "Laporan Teknisi - SATRIA", { showIkrMenu = !showIkrMenu }, iconColor = Color(0xFF4CAF50))
         SettingsCard(R.drawable.ic_settings, "Mode Tampilan", 
             if (isLightMode) "Light Mode aktif" else "Dark Mode aktif", 
