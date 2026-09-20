@@ -628,20 +628,20 @@ fun SettingsScreen(
         // ===== KHUSUS IKR (expandable) =====
         SettingsCard(
             R.drawable.ic_team,
-            "KHUSUS IKR",
+            color = Color(0xFF4CAF50), "KHUSUS IKR",
             if (showIkrMenu) "Tap untuk tutup" else "Laporan Teknisi - SATRIA",
             onClick = { showIkrMenu = !showIkrMenu }
         )
         if (showIkrMenu) {
-            SettingsCard(R.drawable.ic_report, "Laporan Teknisi", "Buat dan kirim laporan ke CS", onReportClick)
+            SettingsCard(R.drawable.ic_report, "Laporan Teknisi", iconColor = Color(0xFF4CAF50), "Buat dan kirim laporan ke CS", onReportClick)
             SettingsCard(R.drawable.ic_satria, "SATRIA", "Buka portal SATRIA 2000", onSatriaClick)
         }
         Spacer(modifier = Modifier.height(8.dp))
-        SettingsCard(R.drawable.ic_info, "Tentang Aplikasi", "IKR NETOPS v8.1", onAboutClick)
-        SettingsCard(R.drawable.ic_developer, "Pengembang", "Themin Vigi Dwi Safik Reno", onDeveloperClick)
-        SettingsCard(R.drawable.ic_router, "Server Speed Test", "Cloudflare · Tele2 · OVH", {})
-        SettingsCard(R.drawable.ic_settings, "Mode Login", "Auto-Login · Manual Fallback", {})
-        SettingsCard(R.drawable.ic_info, "Versi Aplikasi", "v8.1 · Build 2", {})
+        SettingsCard(R.drawable.ic_info, "Tentang Aplikasi", iconColor = Color(0xFF2196F3), "IKR NETOPS v8.1", onAboutClick)
+        SettingsCard(R.drawable.ic_developer, "Pengembang", iconColor = Color(0xFF9C27B0), "Themin Vigi Dwi Safik Reno", onDeveloperClick)
+        SettingsCard(R.drawable.ic_router, "Server Speed Test", iconColor = Color(0xFFFF9800), "Cloudflare · Tele2 · OVH", {})
+        SettingsCard(R.drawable.ic_settings, "Mode Login", iconColor = Color(0xFFE91E63), "Auto-Login · Manual Fallback", {})
+        SettingsCard(R.drawable.ic_info, "Versi Aplikasi", iconColor = Color(0xFF9E9E9E), "v8.1 · Build 2", {})
         SettingsCard(R.drawable.ic_settings, "Mode Tampilan", 
             if (isLightMode) "Light Mode aktif" else "Dark Mode aktif", 
             onLightModeClick)
@@ -662,7 +662,7 @@ fun SettingsScreen(
 }
 
 @Composable
-fun SettingsCard(iconRes: Int, title: String, subtitle: String, onClick: () -> Unit) {
+fun SettingsCard(iconRes: Int, title: String, subtitle: String, iconColor: Color = NeonCyan, onClick: () -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth().padding(vertical = 5.dp).clickable { onClick() },
         colors = CardDefaults.cardColors(containerColor = SurfaceDark),
@@ -676,7 +676,7 @@ fun SettingsCard(iconRes: Int, title: String, subtitle: String, onClick: () -> U
                 contentAlignment = Alignment.Center
             ) {
                 Image(painter = painterResource(id = iconRes), contentDescription = title,
-                    modifier = Modifier.size(22.dp), colorFilter = ColorFilter.tint(NeonCyan))
+                    modifier = Modifier.size(22.dp), colorFilter = ColorFilter.tint(iconColor))
             }
             Spacer(modifier = Modifier.width(14.dp))
             Column(modifier = Modifier.weight(1f)) {
@@ -701,7 +701,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
         title = {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Image(painter = painterResource(id = R.drawable.ic_info), contentDescription = null,
-                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(NeonCyan))
+                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(iconColor))
                 Spacer(modifier = Modifier.width(10.dp))
                 Text("Tentang Aplikasi", fontWeight = FontWeight.Bold)
             }
@@ -755,7 +755,7 @@ fun DeveloperDialog(onDismiss: () -> Unit) {
         title = {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Image(painter = painterResource(id = R.drawable.ic_developer), contentDescription = null,
-                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(NeonCyan))
+                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(iconColor))
                 Spacer(modifier = Modifier.width(10.dp))
                 Text("Pengembang", fontWeight = FontWeight.Bold)
             }
@@ -880,7 +880,7 @@ fun ManualInputDialog(onDismiss: () -> Unit, onConfirm: (String, String, String)
         title = {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Image(painter = painterResource(id = R.drawable.ic_router), contentDescription = null,
-                    modifier = Modifier.size(26.dp), colorFilter = ColorFilter.tint(NeonCyan))
+                    modifier = Modifier.size(26.dp), colorFilter = ColorFilter.tint(iconColor))
                 Spacer(modifier = Modifier.width(10.dp))
                 Text("Konfigurasi Modem Lain", fontWeight = FontWeight.Bold)
             }
