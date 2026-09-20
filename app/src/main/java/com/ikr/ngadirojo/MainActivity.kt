@@ -880,7 +880,7 @@ fun ManualInputDialog(onDismiss: () -> Unit, onConfirm: (String, String, String)
         title = {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Image(painter = painterResource(id = R.drawable.ic_router), contentDescription = null,
-                    modifier = Modifier.size(26.dp), colorFilter = ColorFilter.tint(iconColor))
+                    modifier = Modifier.size(26.dp), colorFilter = ColorFilter.tint(NeonCyan))
                 Spacer(modifier = Modifier.width(10.dp))
                 Text("Konfigurasi Modem Lain", fontWeight = FontWeight.Bold)
             }
