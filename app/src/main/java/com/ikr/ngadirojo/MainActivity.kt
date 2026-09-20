@@ -662,7 +662,7 @@ fun SettingsScreen(
 }
 
 @Composable
-fun SettingsCard(iconRes: Int, title: String, subtitle: String, iconColor: Color = NeonCyan, onClick: () -> Unit) {
+fun SettingsCard(iconRes: Int, title: String, subtitle: String, onClick: () -> Unit, iconColor: Color = NeonCyan) {
     Card(
         modifier = Modifier.fillMaxWidth().padding(vertical = 5.dp).clickable { onClick() },
         colors = CardDefaults.cardColors(containerColor = SurfaceDark),
