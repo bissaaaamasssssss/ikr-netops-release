@@ -627,14 +627,6 @@ fun SettingsScreen(
         Spacer(modifier = Modifier.height(28.dp))
         // ===== KHUSUS IKR (expandable) =====
         SettingsCard(
-            R.drawable.ic_team,
-            color = Color(0xFF4CAF50), "KHUSUS IKR",
-            if (showIkrMenu) "Tap untuk tutup" else "Laporan Teknisi - SATRIA",
-        if (showIkrMenu) {
-            SettingsCard(R.drawable.ic_report, "Laporan Teknisi", "Buat dan kirim laporan ke CS", onReportClick, iconColor = Color(0xFF4CAF50))
-            SettingsCard(R.drawable.ic_satria, "SATRIA", "Buka portal SATRIA 2000", onSatriaClick)
-        }
-        Spacer(modifier = Modifier.height(8.dp))
         SettingsCard(R.drawable.ic_info, "Tentang Aplikasi", "IKR NETOPS v8.1", onAboutClick, iconColor = Color(0xFF2196F3))
         SettingsCard(R.drawable.ic_developer, "Pengembang", "Themin Vigi Dwi Safik Reno", onDeveloperClick, iconColor = Color(0xFF9C27B0))
         SettingsCard(R.drawable.ic_router, "Server Speed Test", "Cloudflare · Tele2 · OVH", {}, iconColor = Color(0xFFFF9800))
