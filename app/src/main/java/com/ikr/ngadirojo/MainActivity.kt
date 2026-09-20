@@ -638,7 +638,7 @@ fun SettingsScreen(
         }
         Spacer(modifier = Modifier.height(8.dp))
         SettingsCard(R.drawable.ic_info, "Tentang Aplikasi", iconColor = Color(0xFF2196F3), "IKR NETOPS v8.1", onAboutClick)
-        SettingsCard(R.drawable.ic_developer, "Pengembang", iconColor = Color(0xFF9C27B0), "Themin Vigi Dwi Safik Reno", onDeveloperClick)
+        SettingsCard(R.drawable.ic_developer, "Pengembang", "Themin Vigi Dwi Safik Reno", onDeveloperClick, iconColor = Color(0xFF9C27B0))
         SettingsCard(R.drawable.ic_router, "Server Speed Test", "Cloudflare · Tele2 · OVH", {}, iconColor = Color(0xFFFF9800))
         SettingsCard(R.drawable.ic_settings, "Mode Login", "Auto-Login · Manual Fallback", {}, iconColor = Color(0xFFE91E63))
         SettingsCard(R.drawable.ic_info, "Versi Aplikasi", "v8.1 · Build 2", {}, iconColor = Color(0xFF9E9E9E))
