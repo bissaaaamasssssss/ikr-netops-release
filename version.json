@@ -1,0 +1,7 @@
+{
+  "versionCode": 2,
+  "versionName": "1.1",
+  "changelog": "• Fix speed test real-time\n• Update UI warna-warni\n• Fitur Auto ACL\n• Fitur dBm (Redaman)\n• Bug fixes",
+  "apkUrl": "https://github.com/hakerindo/ikr-netops-release/releases/download/v1.1/IKR-NETOPS-v1.1.apk",
+  "mandatory": false
+}
