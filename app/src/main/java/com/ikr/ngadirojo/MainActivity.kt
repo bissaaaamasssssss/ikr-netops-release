@@ -255,9 +255,9 @@ class MainActivity : ComponentActivity() {
             modifier = Modifier.width(68.dp).clip(RoundedCornerShape(14.dp)).clickable { onClick() }.padding(vertical = 6.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Box(modifier = Modifier.size(40.dp).clip(CircleShape).background(glowColor), contentAlignment = Alignment.Center) {
+            Box(modifier = Modifier.size(44.dp).clip(CircleShape).background(glowColor), contentAlignment = Alignment.Center) {
                 Image(painter = painterResource(id = iconRes), contentDescription = label,
-                    modifier = Modifier.size(24.dp), colorFilter = ColorFilter.tint(tintColor))
+                    modifier = Modifier.size(28.dp), colorFilter = ColorFilter.tint(tintColor))
             }
             Spacer(modifier = Modifier.height(4.dp))
             Text(label, color = tintColor, fontSize = 10.sp,
@@ -625,9 +625,7 @@ fun SettingsScreen(
         Text("PENGATURAN", color = NeonCyan, fontSize = 22.sp, fontWeight = FontWeight.Bold, letterSpacing = 3.sp)
         Text("Kelola preferensi aplikasi", color = TextSub, fontSize = 11.sp, modifier = Modifier.padding(top = 4.dp))
         Spacer(modifier = Modifier.height(28.dp))
-        // ===== KHUSUS IKR (expandable) =====
         SettingsCard(R.drawable.ic_developer, "Pengembang", "Themin Vigi Dwi Safik Reno", onDeveloperClick, iconColor = Color(0xFF9C27B0))
-            SettingsCard(R.drawable.ic_team, "KHUSUS IKR", if (showIkrMenu) "Tap untuk tutup" else "Laporan Teknisi - SATRIA", { showIkrMenu = !showIkrMenu }, iconColor = Color(0xFF4CAF50))
         SettingsCard(R.drawable.ic_settings, "Mode Tampilan", 
             if (isLightMode) "Light Mode aktif" else "Dark Mode aktif", 
             onLightModeClick)
