@@ -34,12 +34,13 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".SpeedTestActivity"
-            android:theme="@style/AppTheme" />
-            <provider
+                android:resource="@xml/file_paths" />
+        </provider>
         <activity
             android:name=".HistoryActivity"
             android:exported="false"
             android:theme="@style/AppTheme" />
+        <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.ikr.ngadirojo.fileprovider"
             android:exported="false"
