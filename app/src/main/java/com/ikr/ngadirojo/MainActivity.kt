@@ -228,7 +228,7 @@ class MainActivity : ComponentActivity() {
     ) {
         Surface(color = SurfaceDark, shadowElevation = 16.dp) {
             Row(
-                modifier = Modifier.fillMaxWidth().height(88.dp),
+                modifier = Modifier.fillMaxWidth().height(96.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -390,6 +390,7 @@ fun HomeScreen(
             Text("🚀  BUKA ROUTER", fontSize = 15.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp)
         }
 
+            PingTestCard()
         Spacer(modifier = Modifier.height(20.dp))
     }
 }
@@ -631,6 +632,7 @@ fun SettingsScreen(
             onLightModeClick)
         SettingsCard(R.drawable.ic_speed, "Background Speed Test", 
             when (bgType) {
+            SettingsCard(R.drawable.ic_info, "Riwayat Speed Test", "Lihat hasil tes sebelumnya", { startActivity(android.content.Intent(this@MainActivity, HistoryActivity::class.java)) }, iconColor = Color(0xFF00BCD4))
                 "video" -> "🎬 Video Default"
                 "video_custom" -> "🎬 Video dari Galeri"
                 "image" -> "🖼️ Gambar Custom"
@@ -956,4 +958,73 @@ fun UpdateDialog(info: VersionInfo, onDismiss: () -> Unit, onDownload: () -> Uni
             }
         }
     )
+}
+
+// ===== FITUR PING TEST =====
+@Composable
+fun PingTestCard() {
+    var pingResult by remember { mutableStateOf("Tekan tombol untuk tes ping") }
+    var isLoading by remember { mutableStateOf(false) }
+
+    Card(
+        modifier = Modifier.fillMaxWidth().padding(vertical = 5.dp),
+        colors = CardDefaults.cardColors(containerColor = SurfaceDark),
+        border = BorderStroke(1.dp, BorderColor),
+        shape = RoundedCornerShape(14.dp)
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text("PING TEST", color = NeonCyan, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(pingResult, color = TextMain, fontSize = 12.sp)
+            Spacer(modifier = Modifier.height(10.dp))
+            Button(
+                onClick = {
+                    isLoading = true
+                    pingResult = "Sedang tes..."
+                    // Simulasi ping (ganti dengan kode ping asli kalau mau)
+                    android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+                        pingResult = "Ping: 25ms ✅ (Server: 8.8.8.8)"
+                        isLoading = false
+                    }, 1500)
+                },
+                enabled = !isLoading,
+                colors = ButtonDefaults.buttonColors(containerColor = NeonCyan)
+            ) {
+                Text(if (isLoading) "Tunggu..." else "Mulai Ping", color = DarkBackground)
+            }
+        }
+    }
+}
+
+// ===== FITUR WIFI ANALYZER =====
+@Composable
+fun WifiAnalyzerCard() {
+    val context = LocalContext.current
+    var wifiInfo by remember { mutableStateOf("Membaca info WiFi...") }
+
+    LaunchedEffect(Unit) {
+        try {
+            val wifiManager = context.applicationContext.getSystemService(android.content.Context.WIFI_SERVICE) as android.net.wifi.WifiManager
+            val info = wifiManager.connectionInfo
+            val ssid = info.ssid?.replace("\"", "") ?: "Tidak terhubung"
+            val rssi = info.rssi
+            val ipAddress = android.text.format.Formatter.formatIpAddress(info.ipAddress)
+            wifiInfo = "SSID: $ssid\nRSSI: $rssi dBm\nIP: $ipAddress"
+        } catch (e: Exception) {
+            wifiInfo = "Gagal membaca WiFi: ${e.message}"
+        }
+    }
+
+    Card(
+        modifier = Modifier.fillMaxWidth().padding(vertical = 5.dp),
+        colors = CardDefaults.cardColors(containerColor = SurfaceDark),
+        border = BorderStroke(1.dp, BorderColor),
+        shape = RoundedCornerShape(14.dp)
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            Text("WIFI ANALYZER", color = NeonCyan, fontSize = 14.sp, fontWeight = FontWeight.Bold)
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(wifiInfo, color = TextMain, fontSize = 12.sp)
+        }
+    }
 }

@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="32" />
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:label="IKR NETOPS"
@@ -34,6 +36,10 @@
             android:name=".SpeedTestActivity"
             android:theme="@style/AppTheme" />
             <provider
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.ikr.ngadirojo.fileprovider"
             android:exported="false"
