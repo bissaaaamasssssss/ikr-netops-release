@@ -1,7 +1,7 @@
 {
   "versionCode": 4,
-  "versionName": "1.2",
+  "versionName": "1.4",
   "changelog": "• Perbaikan stabilitas\n• Fix bug signing\n• Update konfigurasi build",
-  "apkUrl": "https://github.com/bissaaaamasssssss/ikr-netops-release/releases/download/v1.1/IKR-ROUTER-COLOR.apk",
+  "apkUrl": "https://github.com/bissaaaamasssssss/ikr-netops-release/releases/download/v1.1/IKR.NETOPS.v1.4.apk",
   "mandatory": false
 }
